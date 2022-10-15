@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>pasword manager
+
+    </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <script src="js/main.js"></script>
+
+    <style>
+        footer {
+            position: relative;
+            height: 6vh;
+            width: 100%;
+            background-color: #333333;
+            position: fixed;
+            bottom: 0;
+        }
+
+        p.copyright {
+            position: absolute;
+            width: 100%;
+            color: #fff;
+            line-height: 40px;
+            text-align: center;
+            bottom: 0;
+        }
+    </style>
+</head>
+
+<body class='bg-danger' onload='FetchAllValuesDisplayTable()'>
+    <div class="container">
+
+        <div class="jumbotron text-center">
+            <h3 class='text-center'>Password manager</h3>
+            <form action="#" method='post' id='formSubmit'>
+                <div class="form-group">
+                    <label for="site">Social Site</label>:</label>
+                    <input type="text" class="form-control" id="site">
+                </div>
+                <div class="form-group">
+                    <label for="accountID">Account ID(username)</label>:</label>
+                    <input type="text" class="form-control" id="accountID">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>:</label>
+                    <input type="text" class="form-control" id="password">
+                </div>
+
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+
+
+
+
+
+
+        </div>
+
+        <table class="table table-striped">
+            <thead class='bg-primary'>
+                <tr>
+                    <th>Site</th>
+                    <th>Account Name</th>
+                    <th>Password</th>
+                </tr>
+            </thead>
+            <tbody id='dynamicFill'>
+
+            </tbody>
+        </table>
+        <button type="button" class="btn btn-warning btn-sm"><a style="text-decoration: none;color: inherit;"
+                href="../index.html">Want to generate new password</a></button>
+
+    </div>
+    <button class="btn btn-danger" onclick="window.localStorage.clear();">Delete All Items</button>
+
+    <footer>
+        <p class="copyright">© Created by Anshul Soni</p>
+    </footer>
+
+</body>
+
+
+</html>
